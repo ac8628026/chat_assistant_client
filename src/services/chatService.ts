@@ -7,7 +7,7 @@ export interface ChatResponse {
 
 export const sendMessage = async (message: string): Promise<ChatResponse> => {
   try {
-    const response = await axios.post("http://localhost:8000/chat-assistant", {
+    const response = await axios.post("https://chat-assistant-backend.kgpian.site/chat-assistant", {
       question: message,  
     });
     return response.data;
